@@ -928,7 +928,8 @@ class ESPAsync_WiFiManager
     int _WiFiAPChannel = 1;
 
     WiFi_AP_IPConfig  _WiFi_AP_IPconfig;
-    
+    // This Setting never be Updated by the Configuration AP
+    // There is no option to override and ever fallback after Reboot ESP32 device
     WiFi_STA_IPConfig _WiFi_STA_IPconfig = { IPAddress(0, 0, 0, 0), IPAddress(192, 168, 2, 1), IPAddress(255, 255, 255, 0),
                                              IPAddress(192, 168, 2, 1), IPAddress(8, 8, 8, 8) };
 
